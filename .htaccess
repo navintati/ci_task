@@ -1,0 +1,13 @@
+#RewriteEngine on
+##RewriteBase /
+#RewriteCond $1 !^(index\.php|resources|robots\.txt)
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ index.php/$1 [L,QSA]
+RewriteEngine on
+AddType application/x-shockwave-flash .swf
+#RewriteBase /
+RewriteCond $1 !^(index\.php|resources|MobileSiteImage|robots\.txt|flash)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L,QSA]
